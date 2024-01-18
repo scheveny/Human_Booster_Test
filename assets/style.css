@@ -1,0 +1,297 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/******HEADER*****/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+}
+
+.website-title {
+    display: flex;
+    font-family: 'Poppins';
+    color : rgb(146, 37, 37);
+    .title-human {
+        font-weight: 300;
+    }
+    h1 i {
+        position: relative;
+        top: 3px;
+    }
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    div {
+        height: 40%;
+    }
+    .up-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 45px;
+        padding-right: 10%;
+        margin-bottom: 2%;
+        background: linear-gradient(to right, #ffffff, #cccccc);
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .down-nav {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+        .ticketting-text {
+            position: relative;
+            bottom: 5px;
+            color: rgb(146, 37, 37);
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+.up-nav-text {
+    display: flex;
+    align-items: center;
+    a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .blog-link {
+        padding-right: 30px;
+        border-right: rgb(141, 137, 137) solid 1px;
+    }
+    .contact-link {
+        padding-left: 30px;
+    }
+}
+
+.up-nav-icon {
+    display: flex;
+    width: 8%;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        color : rgb(146, 37, 37);
+        font-size: 24px;
+    }
+}
+
+main {
+    max-width: 90%;
+    margin: auto;
+}
+
+/*******WINFAIR**********/
+
+/*******CAROUSEL*******/
+
+/*******DESCRIPTION BANNER********/
+
+.description-banner {
+    display: flex;
+    flex-direction: column;
+    .fine-palate-banner {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            font-weight: 600;
+            font-size: 18px;
+            color : rgb(146, 37, 37);
+            margin-bottom: 0;
+            margin-top: 25px;
+        }
+        h3 {
+            font-size: 50px;
+            font-weight: 400;
+            color: rgb(67, 65, 65);
+            margin-top: 0;
+        }
+        .palate-text {
+            display: flex;
+            flex-direction: column;
+            .part1 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            .part2 {
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 20px;
+            }
+        }
+        .discover-fair-btn {
+            font-family: 'Work Sans';
+            font-size: 16px;
+            font-weight: 600;
+            background-color: rgb(146, 37, 37);
+            border: rgb(146, 37, 37) solid 2px;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 50px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.details-banner {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    .details-content {
+        height: 350px;
+        .img-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.5;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            div {
+                padding-right: 30px;
+                padding-left: 20px;
+                h2 {
+                    color: rgb(146, 37, 37);
+                    font-weight: 700;
+                    font-size: 80px;
+                    margin: 0;
+                }
+                h2 span {
+                    vertical-align: super;
+                    font-size: 40px;
+                }
+                h3 {
+                    margin-top: 0;
+                }
+                p {
+                    font-weight: 600;
+                }
+            }
+            .visitor-text, .exhibitor-text, .hubs-to-visit-text {
+                border-right: black 1px dotted;
+            }
+        }
+    }
+}
+
+/*******TO BOOK BANNER*****/
+
+.toBook-banner .title {
+    display: flex;
+    flex-direction: column;
+    h2 {
+        font-weight: 600;
+        font-size: 18px;
+        color : rgb(146, 37, 37);
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 50px;
+        font-weight: 400;
+        color: rgb(67, 65, 65);
+        margin-top: 0;
+    }
+}
+
+.toBook-content {
+    display: flex;
+    justify-content: space-between;
+    .part1 {
+        display: flex;
+        margin-top: 10px;
+        height: 70px;
+    }
+    .toBook-text {
+        display: flex;
+        flex-direction: column;
+        .big-letter {
+                font-size: 100px;
+                font-weight: 700;
+                color : rgb(146, 37, 37);
+                text-align: left;
+                position: relative;
+                bottom: 52px;
+            }
+            .big-letter-text {
+                height: fit-content;
+            }
+            .part1, .part2 {
+                font-size: 22px;
+            }
+            .part2, .part3 {
+                margin-left: 6px;
+                margin-bottom: 20px;
+            }
+            .part3 {
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+        .btn-section {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            button {
+                font-family: 'Work Sans';
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 50px;
+            }
+            .exhibitors-list-btn {
+                background-color: #ffffff;
+                border: rgb(146, 37, 37) solid 2px;
+                color: rgb(146, 37, 37);
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+            .toBook-btn {
+                background-color: rgb(146, 37, 37);
+                border: rgb(146, 37, 37) solid 2px;
+                color: #ffffff;
+                i {
+                    font-size: 24px;
+                    margin-right: 5px;
+                    padding: 18px;
+                    border-radius: 50px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: rgb(105, 50, 50);
+                    position: relative;
+                    right: 5px;
+                }
+                i::before {
+                    position: relative;
+                    right: 5px;
+                    bottom: 4px;
+                }
+                span {
+                    position: relative;
+                    bottom: 5px;
+                    padding-right: 15px;
+                }
+            }
+        }
+}
