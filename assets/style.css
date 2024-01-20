@@ -382,7 +382,7 @@ header {
 #newsletter-banner {
     position: relative;
     margin-top: 100px;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
     .newsletter-content {
         position: relative;
         z-index: 1; /* Assure que le contenu reste au-dessus de l'image de fond */
@@ -500,5 +500,136 @@ header {
                 padding-bottom: 2px;
             }
         }
+    }
+}
+
+/*****PRACTICAL INFOS*******/
+
+#practical-infos {
+    display: flex;
+    flex-direction: column;
+    .rate-infos {
+        display: flex;
+        column-gap: 6.2%;
+        img[src="assets/images/winefair/practical_1.png"] {
+            width: 46%;
+        }
+        .rate-infos-subsection {
+            display: flex;
+            flex-direction: column;
+            width: 49%;
+            row-gap: 4.9%;
+            .rate-content {
+                display: flex;
+                height: 51.2%;
+                justify-content: space-between;
+                .rate-text {
+                    .title {
+                        h2 {
+                            font-weight: 600;
+                            font-size: 18px;
+                            color: rgb(146, 37, 37);
+                            margin-bottom: 0;
+                        }
+                        h3 {
+                            font-size: 50px;
+                            font-weight: 400;
+                            color: rgb(67, 65, 65);
+                            margin-top: 0;
+                        }
+                    }
+                    p {
+                        font-size: 22px;
+                    }
+                }
+                img[src="assets/images/winefair/practical_2.png"] {
+                    width: 40%;
+                    height: 300px;
+                    position: relative;
+                    bottom: 70px;
+                }
+            }
+            .ticketRate-infos {
+                height: 43.9%;
+                .ticket-array {
+                    width: 95%;
+                    height: 110%;
+                    display: grid;
+                    grid-template-columns: 71% 29%;
+                    grid-template-rows: 28.51% 42.76% 28.51%;
+                    align-items: center;
+                    border-top: 1px dotted rgb(67, 65, 65);
+                    border-bottom: 1px dotted rgb(67, 65, 65);
+                    > div > div:first-child > span {
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                    > div > div > span:nth-child(2) {
+                        font-size: 14px;
+                    }
+                    #underAge-ticket {
+                        border-top: 1px dotted rgb(67, 65, 65);
+                        border-bottom: 1px dotted rgb(67, 65, 65);
+                    }
+                    .ticket {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 100%;
+                        border-right: 1px dotted rgb(67, 65, 65);
+                        border-left: none;
+                        padding-left: 20px;
+                    }
+                    #underAge-rate {
+                        border-top: 1px dotted rgb(67, 65, 65);
+                        border-bottom: 1px dotted rgb(67, 65, 65);
+                    }
+                    .rate {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: rgb(146, 37, 37);
+                        font-weight: 600;
+                        font-size: 18px;
+                        height: 100%;
+                    }
+                }
+                .ticket-access {
+                    margin-top: 40px;
+                    width: fit-content;
+                    background-color: rgb(146, 37, 37);
+                    border: rgb(146, 37, 37) solid 2px;
+                    color: #ffffff;
+                    border-radius: 50px;
+                    padding: 5px 30px 5px 10px;
+                    i {
+                        font-size: 24px;
+                        margin-right: 5px;
+                        padding: 18px;
+                        border-radius: 50px;
+                        width: 20px;
+                        height: 20px;
+                        background-color: rgb(105, 50, 50);
+                        position: relative;
+                        right: 5px;
+                    }
+                    i::before {
+                        position: relative;
+                        right: 5px;
+                        bottom: 4px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #ffffff;
+                        position: relative;
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+
+    }
+    .location-infos {
+        margin-top: 100px;
     }
 }
