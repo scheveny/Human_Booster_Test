@@ -380,128 +380,126 @@ header {
 /******NEWSLETTER**********/
 
 #newsletter-banner {
-    position: relative;
     margin-top: 100px;
     margin-bottom: 120px;
-    .newsletter-content {
-        position: relative;
-        z-index: 1; /* Assure que le contenu reste au-dessus de l'image de fond */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 420px;
-        .img-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+    position: relative;
+    z-index: 1; /* Assure que le contenu reste au-dessus de l'image de fond */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 420px;
+    .img-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img {
             width: 100%;
             height: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* Pour assurer le remplissage de l'image */
-                filter: brightness(0.3); /* Ajustez la valeur pour obtenir l'effet de filtre sombre souhaité */
-            }
+            object-fit: cover; /* Pour assurer le remplissage de l'image */
+            filter: brightness(0.3); /* Ajustez la valeur pour obtenir l'effet de filtre sombre souhaité */
         }
-        .title, .email-form, .confidentiality {
-            position: relative;
-            z-index: 2; /* Assure que le texte reste au-dessus de l'image de fond */
+    }
+    .title, .email-form, .confidentiality {
+        position: relative;
+        z-index: 2; /* Assure que le texte reste au-dessus de l'image de fond */
+    }
+    .title {
+        height: 110px;
+        width: fit-content;
+        position: relative;
+        left: 41%;
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: #a9a8a8;
+            margin: 0;
         }
-        .title {
-            height: 110px;
-            width: fit-content;
-            position: relative;
-            left: 41%;
-            h2 {
-                text-align: center;
-                font-size: 18px;
-                font-weight: 500;
-                color: #a9a8a8;
-                margin: 0;
-            }
-            h3 {
-                font-size: 55px;
-                color: #ffffff;
-                font-weight: 400;
-                margin: 0;
-            }
-            .non-straight-underline {
-                position: relative;
-                width: 70%;
-                margin: 0 auto;
-                height: 8px;
-                clip-path: polygon(
-                    0 0,
-                    100% 10%,
-                    0 20%,
-                    100% 30%,
-                    0 40%,
-                    100% 50%,
-                    0 60%,
-                    100% 70px,
-                    0 80%,
-                    100% 90%,
-                    0 100%
-                );
-                background-color: rgb(146, 37, 37);
-            }
-        }
-        .email-form {
-            margin-left: 35%;
-            form {
-                display: flex;
-                flex-direction: column;
-                width: 45%;
-                margin-top: 50px;
-                gap: 10px;
-                font-family: 'Work Sans';
-                label {
-                    color: #ffffff;
-                    font-weight: 600;
-                    font-size: 14px;
-                }
-                div {
-                    display: flex;
-                    input {
-                        padding: 20px 10px;
-                        border: none;
-                        font-size: 18px;
-                    }
-                    input[type="email"] {
-                        width: 70%;
-                        border-radius: 50px 0 0 50px;
-                    }
-                    input[type="email"]::placeholder {
-                        text-align: center;
-                    }
-                    input[type="submit"]{
-                        width: 30%;
-                        border-radius: 0 50px 50px 0;
-                        background-color: rgb(146, 37, 37);
-                        color: #ffffff;
-                    }
-                }
-            }
-        }
-        .confidentiality {
-            display: flex;
+        h3 {
+            font-size: 55px;
             color: #ffffff;
-            justify-content: center;
-            font-weight: 300;
-            font-size: 15px;
-            i {
-                font-size: 22px;
-                position: relative;
-                right: 10px;
-                top: 15px;
+            font-weight: 400;
+            margin: 0;
+        }
+        .non-straight-underline {
+            position: relative;
+            width: 70%;
+            margin: 0 auto;
+            height: 8px;
+            clip-path: polygon(
+                0 0,
+                100% 10%,
+                0 20%,
+                100% 30%,
+                0 40%,
+                100% 50%,
+                0 60%,
+                100% 70px,
+                0 80%,
+                100% 90%,
+                0 100%
+            );
+            background-color: rgb(146, 37, 37);
+        }
+    }
+    .email-form {
+        margin-left: 35%;
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            margin-top: 50px;
+            gap: 10px;
+            font-family: 'Work Sans';
+            label {
+                color: #ffffff;
+                font-weight: 600;
+                font-size: 14px;
             }
-            p span {
-                border-bottom: 1px white solid;
-                padding-bottom: 2px;
+            div {
+                display: flex;
+                input {
+                    padding: 20px 10px;
+                    border: none;
+                    font-size: 18px;
+                }
+                input[type="email"] {
+                    width: 70%;
+                    border-radius: 50px 0 0 50px;
+                }
+                input[type="email"]::placeholder {
+                    text-align: center;
+                }
+                input[type="submit"]{
+                    width: 30%;
+                    border-radius: 0 50px 50px 0;
+                    background-color: rgb(146, 37, 37);
+                    color: #ffffff;
+                }
             }
         }
     }
+    .confidentiality {
+        display: flex;
+        color: #ffffff;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 15px;
+        i {
+            font-size: 22px;
+            position: relative;
+            right: 10px;
+            top: 15px;
+        }
+        p span {
+            border-bottom: 1px white solid;
+            padding-bottom: 2px;
+        }
+    }
 }
+
 
 /*****PRACTICAL INFOS*******/
 
@@ -630,6 +628,172 @@ header {
 
     }
     .location-infos {
-        margin-top: 100px;
+        position: relative;
+        margin-top: 250px;
+        margin-bottom: 120px;
+        z-index: 1; /* Assure que le contenu reste au-dessus de l'image de fond */
+        display: flex;
+        height: 680px;
+        .img-container {
+            .map-btns {
+                position: absolute;
+                top: 4%;
+                left: 1%;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                button {
+                    border: none;
+                    background: none;
+                }
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .map-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Pour assurer le remplissage de l'image */
+            }
+        }
+        .content {
+            z-index: 2;
+            display: flex;
+            justify-content: right;
+            width: 100%;
+            i[class="fa-regular fa-circle-dot"] {
+                font-size: 40px;
+                color: rgb(146, 37, 37);
+                position: relative;
+                top: 43%;
+                right: 26%;
+            }
+            }
+            .content-text {
+                background-color: rgb(24, 24, 24);
+                width: 37.5%;
+                height: 95%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                position: relative;
+                top: 80px;
+                .title, .address, .phone, .opening-hours, .fair-plan-link {
+                    margin-left: 15%;
+                }
+                .title {
+                    h2 {
+                        font-family: 'Work Sans';
+                        font-weight: 400;
+                        font-size: 18px;
+                        margin-bottom: 0;
+                        color: #a9a8a8;
+                        margin: 0;
+                    }
+                    h3 {
+                        font-size: 50px;
+                        font-weight: 400;
+                        margin-top: 0;
+                        color: #ffffff;
+                        margin: 0;
+                    }
+                    .non-straight-underline {
+                        position: relative;
+                        width: 50%;
+                        margin-left: 0;
+                        height: 8px;
+                        clip-path: polygon(
+                            0 0,
+                            100% 10%,
+                            0 20%,
+                            100% 30%,
+                            0 40%,
+                            100% 50%,
+                            0 60%,
+                            100% 70px,
+                            0 80%,
+                            100% 90%,
+                            0 100%
+                        );
+                        background-color: rgb(146, 37, 37);
+                    }
+                }
+                .address-phone {
+                    display: flex;
+                    flex-direction: column;
+                    color: #ffffff;
+                    font-size: 24px;
+                    font-weight: 300;
+                    gap: 10px;
+                    i {
+                        color: rgb(146, 37, 37);
+                    }
+                    .address {
+                        display: flex;
+                        gap: 15px;
+                        .address-text {
+                            width: 70%;
+                        }
+                    }
+                    .phone {
+                        display: flex;
+                        gap: 10px;
+                    }
+                }
+                .opening-hours {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 18px;
+                    div {
+                        display: flex;
+                        span:first-child {
+                            color: #a9a8a8;
+                        }
+                        span:nth-child(2) {
+                            color: #d5d3d3;
+                            font-weight: 500;
+                            padding-left: 5px;
+                        }
+                    }
+                }
+                .fair-plan-link {
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-weight: 600;
+                    font-family: 'Work Sans';
+                    padding: 20px;
+                    border-radius: 50px;
+                    background-color: rgb(146, 37, 37);
+                }
+            }
+        }
+    }
+
+/****FOOTER*****/
+
+footer {
+    display: flex;
+    font-family: 'Work Sans';
+    color: #ffffff;
+    background-color:  rgb(146, 37, 37);
+    padding: 1%  5.15%;
+    gap: 15%;
+    .footer-links {
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #ffffff;
+            padding: 0 20px;
+            border-left: #ffffff solid 1px;
+        }
+        .first-link {
+            border-left: none;
+            padding-left: 0;
+        }
+    }
+    .footer-mention {
+        font-weight: 300;
     }
 }
