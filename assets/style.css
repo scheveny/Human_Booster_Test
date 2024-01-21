@@ -1,5 +1,10 @@
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+button:hover, input[type="submit"] {
+    cursor: pointer;
 }
 
 /******HEADER*****/
@@ -45,8 +50,9 @@ header {
     .down-nav {
         display: flex;
         justify-content: space-between;
-        padding-right: 10%;
-        a {
+        padding-right: 9%;
+        div a {
+            margin-right: 10px;
             text-decoration: none;
             color: black;
             font-weight: 600;
@@ -56,8 +62,9 @@ header {
             bottom: 5px;
             color: rgb(146, 37, 37);
         }
-        img {
+        i {
             margin-right: 10px;
+            color: rgb(146, 37, 37);
         }
     }
 }
@@ -94,15 +101,129 @@ header {
     margin-right: 5.15%;
 }
 
-/*******WINFAIR**********/
+/*******MAIN WINFAIR**********/
 
 /*******CAROUSEL*******/
+
+#carousel {
+    position: relative;
+    .img-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        filter: brightness(0.6);
+        img {
+            width: 100%;
+            height: 730px;
+            object-fit: cover;
+        }
+    }
+    .global-carousel {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        color: #ffffff;
+        .prev-arrow, .next-arrow {
+            background-color: rgb(146, 37, 37);
+            padding: 11px 20px;
+            border-radius: 50px;
+            font-size: larger;
+            margin: 11% 2% 0 2%;
+        }
+        .next-arrow {
+            margin-left: auto; /*pour que la next arrox soit tout à droite du conteneur*/
+        }
+        .carousel-content {
+            margin-top: 10%;
+            .opening-days {
+                padding: 8px 15px;
+                border-radius: 50px;
+                background-color: rgb(232, 231, 231, 0.5);
+                width: fit-content;
+                font-family: 'Work Sans';
+                font-size: 18px;
+                font-weight: 600;
+                i {
+                    font-size: smaller;
+                    padding: 0 10px;
+                }
+            }
+            .title {
+                h2 {
+                    font-size: 60px;
+                    font-weight: 400;
+                    width: 60%;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+                div {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    width: fit-content;
+                    gap: 15px;
+                    border-top: rgb(232, 231, 231, 0.5) dotted 2px;
+                    h3 {
+                        margin: 0;
+                        font-size: 12px;
+                        font-family: 'Work Sans';
+                    }
+                }
+            }
+            .carousel-btns {
+                display: flex;
+                align-items: center;
+                margin-top: 40px;
+                gap: 1%;
+                button {
+                    border-radius: 50px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border: none; /*pour éviter les paramètres par défault*/
+                }
+                .N1 {
+                    padding: 20px 35px;
+                    background-color: rgb(146, 37, 37);
+                    color: #ffffff;
+                    border: rgb(164, 84, 84) solid 2px;
+                }
+                .N2 {
+                    color: rgb(146, 37, 37);
+                    border: #ffffff solid 2px;
+                    i {
+                        font-size: 24px;
+                        padding: 15px 0;
+                        transform: rotate(-75deg); /*pour tourner le ticket dans le bon sens*/
+                        position: relative;
+                        right: 5px;
+                    }
+                    i::before {
+                        padding: 15px;
+                        background-color: rgb(219, 165, 165);
+                        border-radius: 50px;
+                    }
+                    span {
+                        position: relative;
+                        bottom: 5px;
+                        padding: 0 20px 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /*******DESCRIPTION BANNER********/
 
 .description-banner {
     display: flex;
     flex-direction: column;
+    margin-top: 17%; /*pour éviter que cette bannière reretrouve en dessous du carroussel*/
     .fine-palate-banner {
         display: flex;
         justify-content: space-between;
@@ -174,15 +295,29 @@ header {
             div {
                 padding-right: 55px;
                 padding-left: 55px;
-                h2 {
-                    color: rgb(146, 37, 37);
-                    font-weight: 700;
-                    font-size: 80px;
-                    margin: 0;
-                }
-                h2 span {
-                    vertical-align: super;
-                    font-size: 40px;
+                margin-top: 40px;
+                .icon-txt-title {
+                    display: flex;
+                    align-items: center;
+                    height: 65px;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    padding-left: 0;
+                    gap: 20px;
+                    i {
+                        font-size: 35px;
+                        color: #ffffff;
+                    }
+                    h2 {
+                        color: rgb(146, 37, 37);
+                        font-weight: 700;
+                        font-size: 80px;
+                        margin: 0;
+                    }
+                    h2 span {
+                        vertical-align: super;
+                        font-size: 40px;
+                    }
                 }
                 h3 {
                     margin-top: 0;
@@ -282,7 +417,7 @@ header {
                     border-radius: 50px;
                     width: 20px;
                     height: 20px;
-                    background-color: rgb(105, 50, 50);
+                    background-color: rgb(164, 84, 84);
                     position: relative;
                     right: 5px;
                 }
@@ -423,24 +558,10 @@ header {
             font-weight: 400;
             margin: 0;
         }
-        .non-straight-underline {
-            position: relative;
+        .snake-line {
             width: 70%;
             margin: 0 auto;
-            height: 8px;
-            clip-path: polygon(
-                0 0,
-                100% 10%,
-                0 20%,
-                100% 30%,
-                0 40%,
-                100% 50%,
-                0 60%,
-                100% 70px,
-                0 80%,
-                100% 90%,
-                0 100%
-            );
+            height: 2px;
             background-color: rgb(146, 37, 37);
         }
     }
@@ -610,11 +731,12 @@ header {
                         background-color: rgb(105, 50, 50);
                         position: relative;
                         right: 5px;
+                        transform: rotate(-75deg);
                     }
                     i::before {
                         position: relative;
-                        right: 5px;
-                        bottom: 4px;
+                        right: 3px;
+                        bottom: 2px;
                     }
                     a {
                         text-decoration: none;
@@ -639,7 +761,7 @@ header {
                 position: absolute;
                 top: 4%;
                 left: 1%;
-                z-index: 2;
+                z-index: 999; /* pour être sûr que le button:hover fonctionne*/
                 display: flex;
                 flex-direction: column;
                 button {
@@ -699,24 +821,11 @@ header {
                         color: #ffffff;
                         margin: 0;
                     }
-                    .non-straight-underline {
+                    .snake-line{
                         position: relative;
                         width: 50%;
                         margin-left: 0;
-                        height: 8px;
-                        clip-path: polygon(
-                            0 0,
-                            100% 10%,
-                            0 20%,
-                            100% 30%,
-                            0 40%,
-                            100% 50%,
-                            0 60%,
-                            100% 70px,
-                            0 80%,
-                            100% 90%,
-                            0 100%
-                        );
+                        height: 2px;
                         background-color: rgb(146, 37, 37);
                     }
                 }
