@@ -7,14 +7,17 @@
         <link href="./assets/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
         <!--Insertion d'un fichier JavaSript-->
-        <script src="./assets/script.js"></script>
+        <script src="./assets/script.js" defer></script><!--le defer sert à être sûr que le chargement initial de la page se fasse avant toute exécution du script-->
+        <!--Lien permettant d'utiliser la bibliothèque d'icônes Fontawesome-->
         <script src="https://kit.fontawesome.com/5c9d52cae8.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <header>
+        <!--Conteneur du titre principal du site et du menu de navigation-->
+        <header> <!--On divise le header une partie gauche et une partie droite-->
             <div class="website-title"><h1 class="title-human">Human</h1><h1 class="title-booster">b<i class="fa-solid fa-infinity"></i>ster</h1></div>
             <div class="header-nav">
+                <!--on divise la partie du haut et la partie du bas-->
                 <div class="up-nav">
                     <div class="up-nav-text">
                         <div><a href="#" class="blog-link">LE BLOG</a></div>
@@ -34,10 +37,11 @@
                 </div>
             </div>
         </header>
-
+        <!--Contenu principal du site-->
         <main>
-            
+            <!--Section informations du contenu du salon-->
             <section id="auvergne-winefair">
+                <!--Conteneur du carrousel-->
                 <div id="carousel">
                     <div class="img-container">
                         <img src="assets/images/winefair/bckg_img_details.jpg" alt="Fond du carroussel">
@@ -67,6 +71,7 @@
                         </div>
                     </div>
                 </div>
+                <!--Conteneur Le rassemblement Auvergnat-->
                 <div class="description-banner">
                     <div class="fine-palate-banner">
                         <img src="assets/images/winefair/description_banner_1.png" alt="2 hommes à un comptoir">
@@ -91,6 +96,7 @@
                         </div>
                         <img src="assets/images/winefair/description_banner_2.png" alt="une femme avec un verre de vin blanc">
                     </div>
+                    <!--Conteneur des statistiques du salon-->
                     <div class="details-banner">
                         <div class="details-content">
                             <div class="img-container">
@@ -153,6 +159,7 @@
                         </div>
                     </div>
                 </div>
+                <!--conteneur "Un tour de France au coeur des vignobles"-->
                 <div class="toBook-banner">
                     <div class="title"><h2>UN TOUR DE FRANCE</h2>
                         <h3>au coeur des vignobles</h3>
@@ -185,7 +192,7 @@
                     </div>
                 </div>
             </section>
-
+            <!--Section du blog pour en savoir plus sur le salon-->
             <section id="news-blog">
                 <div class="title">
                     <h2>LE BLOG</h2>
@@ -222,7 +229,7 @@
                 </div>
                 <div class="all-news-link"><a href="#">TOUTES NOS ACTUALITÉS</a></div>
             </section>
-
+            <!--Section Inscription à la newsletter-->
             <section id="newsletter-banner">
                 <div class="img-container">
                     <img src="assets/images/winefair/newsletter_bckgr.jpg" alt="Fond d'image zoomant sur une grappe de raisin">
@@ -249,8 +256,9 @@
                     </p>
                 </div>
             </section>
-
+            <!--Section Infos pratiques-->
             <section id="practical-infos">
+                <!--Conteneur des infos tarifaires-->
                 <div class="rate-infos">
                     <img src="assets/images/winefair/practical_1.png" alt="un verre de vin se remplissant avec un plat à côté">
                     <div class="rate-infos-subsection">
@@ -294,7 +302,7 @@
                         </div>
                     </div>
                 </div>
-                
+                <!--Conteneur des infos de localisation du salon et des horaires d'ouverture-->
                 <div class="location-infos">
                     <div class="img-container">
                         <div class="map-btns">
@@ -333,7 +341,7 @@
                 </div>
             </section>
         </main>
-
+        <!--Conteneur du menu de liens du pied de page-->
         <footer>
             <div class="footer-links">
                 <a href="#" class="first-link"><span>MENTIONS LÉGALES</span></a>
