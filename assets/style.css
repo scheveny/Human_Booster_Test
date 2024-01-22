@@ -13,6 +13,7 @@ header {
     display: flex;
     justify-content: space-between; /* on crée un conteneur flexible pour pouvoir manipuler le titre et le menu de navigation*/
     padding-left: 5%;
+    margin-bottom: 20px;
 }
 
 .website-title {
@@ -54,28 +55,6 @@ h1 i {
         color: black;
 }
 
-.down-nav {
-    display: flex;
-    justify-content: space-between; /*pour que les éléments du menu inférieur soient espacés de façon égale sans marge aux extrêmités*/
-    padding-right: 9%;
-}
-
-.down-nav div a {
-    margin-right: 10px;
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-.ticketting-text {
-    position: relative;
-    bottom: 5px;
-    color: rgb(146, 37, 37);
-}
-.down-nav i {
-    margin-right: 10px;
-    color: rgb(146, 37, 37);
-}
-
 .up-nav-text {
     display: flex; /*chaque élément du menu les uns à côté des autres*/
     align-items: center; /*centrage vertical*/
@@ -103,6 +82,31 @@ h1 i {
 .up-nav-icon i {
     color : rgb(146, 37, 37);
     font-size: 24px;
+}
+
+.down-nav {
+    display: flex;
+    justify-content: space-between; /*pour que les éléments du menu inférieur soient espacés de façon égale sans marge aux extrêmités*/
+    padding-right: 9%;
+}
+.down-nav div a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.down-nav div img {
+    position: relative;
+    right: 10px;
+}
+.ticketting-text {
+    position: relative;
+    bottom: 5px;
+    color: rgb(146, 37, 37);
+}
+.down-nav i {
+    margin-right: 10px;
+    color: rgb(146, 37, 37);
 }
 
 #auvergne-winefair, #newsletter-banner, #practical-infos {
@@ -204,29 +208,29 @@ h1 i {
 
 .carousel-btns button {
     border-radius: 50px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    height: 60px;
+    font-family: 'Work Sans';
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .N1 {
     padding: 20px 35px;
     background-color: rgb(146, 37, 37);
     color: #ffffff;
-    border: rgb(164, 84, 84) solid 2px;
+    border: rgb(167, 130, 130) solid 2px;
 }
 
 .N2 {
     color: rgb(146, 37, 37);
     border: #ffffff solid 2px;
+    
 }
 .N2 i {
     font-size: 24px;
     padding: 15px;
     transform: rotate(-75deg);
     position: relative;
-    right: 5px;
+    right: 6px;
     background-color: rgb(219, 165, 165);
     border-radius: 50px;
 }
@@ -294,7 +298,7 @@ h1 i {
     position: relative;
     margin-top: 100px;
     margin-bottom: 60px;
-    height: 350px;
+    height: 420px;
 }
 .details-banner .img-container {
     position: absolute;
@@ -302,7 +306,7 @@ h1 i {
     left: 0;
     width: 100%;
     height: 100%;
-    filter: brightness(0.4); /*filtre sombre pour le fond d'image*/
+    filter: brightness(0.3); /*filtre sombre pour le fond d'image*/
 }
 .details-banner .img-container img {
     width: 100%;
@@ -312,7 +316,7 @@ h1 i {
 
 .details-banner .content-txt {
     display: flex;
-    margin-top: 20px;
+    margin-top: 40px;
     position: relative;
     z-index: 1; /** pour que ce contenu soit bien au-dessus de l'image**/
 }
@@ -332,7 +336,7 @@ h1 i {
 }
 .icon-txt-title h2 {
     color: rgb(146, 37, 37);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 80px;
     margin: 0;
 }
@@ -394,12 +398,13 @@ h1 i {
     flex-direction: column;
 }
 .big-letter {
-    font-size: 100px; 
-    font-weight: 700;
+    padding-right: 10px;
+    font-size: 90px; 
+    font-weight: 600;
     color : rgb(146, 37, 37);
     text-align: left;
     position: relative; /*on donne au R un style approprié et on le décale grâce à un position relative pour lui donner la place appropriée*/
-    bottom: 52px;
+    bottom: 40px;
 }
 .toBook-text .part1, .toBook-text .part2 {
     font-size: 22px;
@@ -501,7 +506,7 @@ h1 i {
     text-decoration: none;
     color: rgb(146, 37, 37);
     font-weight: 800;
-    font-size: 14px;
+    font-size: 16px;
     border-bottom: rgb(146, 37, 37) solid 2px;
 }
         
@@ -622,11 +627,13 @@ input[type="submit"]{
     border-radius: 0 50px 50px 0;
     background-color: rgb(146, 37, 37);
     color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .confidentiality {
     display: flex;
-    color: #ffffff;
+    color: #d5d3d3;
     justify-content: center;
     font-weight: 300;
     font-size: 15px;
@@ -749,9 +756,9 @@ input[type="submit"]{
     padding: 5px 30px 5px 10px;
 }
 .ticket-access i {
-    font-size: 24px;
+    font-size: 20px;
     margin-right: 5px;
-    padding: 18px;
+    padding: 15px;
     border-radius: 50px;
     background-color: rgb(105, 50, 50);
     position: relative;
@@ -761,11 +768,12 @@ input[type="submit"]{
 .ticket-access a {
     text-decoration: none;
     color: #ffffff;
+    font-weight: 600;
     position: relative;
-    bottom: 5px;
+    bottom: 3px;
 }
 
-
+/***LOCATION INFOS***/
         
 .location-infos {
     position: relative;
