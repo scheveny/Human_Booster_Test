@@ -19,70 +19,78 @@ header {
     display: flex;
     font-family: 'Poppins';
     color : rgb(146, 37, 37);
-    .title-human {
-        font-weight: 300;
-    }
-    h1 i {
-        position: relative;
-        top: 3px;
-    }
+}
+
+.title-human {
+    font-weight: 300;
+}
+
+h1 i {
+    position: relative;
+    top: 3px;
 }
 
 .header-nav {
     display: flex;
     flex-direction: column;     /*on sépare les 2 menus de navigation avec un en haut et un en bas*/
     width: 55%;
-    div {
-        height: 40%;
-    }
-    .up-nav {
-        display: flex;
-        justify-content: flex-end; /*pour que le menu soit aligné tout à droite*/
-        gap: 45px;
-        padding-right: 10%;
-        margin-bottom: 2%;
-        background: linear-gradient(to right, #ffffff, #cccccc);
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    }
-    .down-nav {
-        display: flex;
-        justify-content: space-between; /*pour que les éléments du menu inférieur soient espacés de façon égale sans marge aux extrêmités*/
-        padding-right: 9%;
-        div a {
-            margin-right: 10px;
-            text-decoration: none;
-            color: black;
-            font-weight: 600;
-        }
-        .ticketting-text {
-            position: relative;
-            bottom: 5px;
-            color: rgb(146, 37, 37);
-        }
-        i {
-            margin-right: 10px;
-            color: rgb(146, 37, 37);
-        }
-    }
+}
+
+.up-nav, .down-nav {
+    height: 40%;
+}
+
+.up-nav {
+    display: flex;
+    justify-content: flex-end; /*pour que le menu soit aligné tout à droite*/
+    gap: 45px;
+    padding-right: 10%;
+    margin-bottom: 2%;
+    background: linear-gradient(to right, #ffffff, #cccccc);
+}
+
+.up-nav a {
+        text-decoration: none;
+        color: black;
+}
+
+.down-nav {
+    display: flex;
+    justify-content: space-between; /*pour que les éléments du menu inférieur soient espacés de façon égale sans marge aux extrêmités*/
+    padding-right: 9%;
+}
+
+.down-nav div a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.ticketting-text {
+    position: relative;
+    bottom: 5px;
+    color: rgb(146, 37, 37);
+}
+.down-nav i {
+    margin-right: 10px;
+    color: rgb(146, 37, 37);
 }
 
 .up-nav-text {
     display: flex;
     align-items: center; /*centrage vertical*/
-    a {
-        font-size: 12px;
-        font-weight: 600;
-    }
-    .blog-link {
-        padding-right: 30px;
-        border-right: rgb(141, 137, 137) solid 1px;
-    }
-    .contact-link {
-        padding-left: 30px;
-    }
+}
+
+.up-nav-text a {
+    font-size: 12px;
+    font-weight: 600;
+}
+.blog-link {
+    padding-right: 30px;
+    border-right: rgb(141, 137, 137) solid 1px;
+}
+.contact-link {
+    padding-left: 30px;
 }
 
 .up-nav-icon {
@@ -90,10 +98,11 @@ header {
     width: 8%;
     justify-content: space-between;
     align-items: center;
-    i {
-        color : rgb(146, 37, 37);
-        font-size: 24px;
-    }
+}
+
+.up-nav-icon i {
+    color : rgb(146, 37, 37);
+    font-size: 24px;
 }
 
 #auvergne-winefair, #newsletter-banner, #practical-infos {
@@ -107,112 +116,127 @@ header {
 
 #carousel {
     position: relative;
-    .img-container {
-        position: absolute; /*pour que l'image soit bien en fond par rapport aux autres éléments du conteneur du carrousel*/
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        filter: brightness(0.6); /*filtre pour assombrir l'image de fond*/
-        img {
-            width: 100%;
-            height: 730px;
-            object-fit: cover;
-        }
-    }
-    .global-carousel {
-        position: relative;
-        z-index: 1; /*les éléments du carrousel sont bien au dessus de l'image*/
-        display: flex;
-        width: 100%;
-        align-items: center;
-        color: #ffffff;
-        .prev-arrow, .next-arrow {
-            background-color: rgb(146, 37, 37);
-            padding: 11px 20px;
-            border-radius: 50px;
-            font-size: larger;
-            margin: 11% 2% 0 2%;
-        }
-        .next-arrow {
-            margin-left: auto; /*pour que la next arrow soit tout à droite du conteneur*/
-        }
-        .carousel-content {
-            margin-top: 10%;
-            .opening-days {
-                padding: 8px 15px;
-                border-radius: 50px;
-                background-color: rgb(232, 231, 231, 0.5);
-                width: fit-content; /*pour que la taille du conteneur suive la taille du contenu*/
-                font-family: 'Work Sans';
-                font-size: 18px;
-                font-weight: 600;
-                i {
-                    font-size: smaller;
-                    padding: 0 10px;
-                }
-            }
-            .title {
-                h2 {
-                    font-size: 60px;
-                    font-weight: 400;
-                    width: 60%;
-                    margin-top: 20px;
-                    margin-bottom: 0;
-                }
-                div {
-                    display: flex;
-                    align-items: center;
-                    padding: 10px;
-                    width: fit-content; /*pour que la taille du conteneur suive la taille du contenu*/
-                    gap: 15px;
-                    border-top: rgb(232, 231, 231, 0.5) dotted 2px;
-                    h3 {
-                        margin: 0;
-                        font-size: 12px;
-                        font-family: 'Work Sans';
-                    }
-                }
-            }
-            .carousel-btns {
-                display: flex;
-                align-items: center; /*on centre verticalement les boutons dans son conteneur*/
-                margin-top: 40px;
-                gap: 1%;
-                button {
-                    border-radius: 50px;
-                    font-size: 14px;
-                    font-weight: 600;
-                    border: none; /*pour éviter les paramètres par défault*/
-                }
-                .N1 {
-                    padding: 20px 35px;
-                    background-color: rgb(146, 37, 37);
-                    color: #ffffff;
-                    border: rgb(164, 84, 84) solid 2px;
-                }
-                .N2 {
-                    color: rgb(146, 37, 37);
-                    border: #ffffff solid 2px;
-                    i {
-                        font-size: 24px;
-                        padding: 15px;
-                        transform: rotate(-75deg); /*pour tourner le ticket dans le bon sens, qui était à l'horizontal à l'origine*/
-                        position: relative; /*on déplace l'icône de façon spécifique sans influer sur les autres éléments du conteneur*/
-                        right: 5px;
-                        background-color: rgb(219, 165, 165);
-                        border-radius: 50px;
-                    }
-                    span {
-                        position: relative;
-                        bottom: 5px;
-                        padding: 0 20px 0 10px;
-                    }
-                }
-            }
-        }
-    }
 }
+
+#carousel .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.6);
+}
+
+#carousel .img-container img {
+    width: 100%;
+    height: 730px;
+    object-fit: cover;
+}
+
+.global-carousel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: #ffffff;
+}
+
+.prev-arrow, .next-arrow {
+    background-color: rgb(146, 37, 37);
+    padding: 11px 20px;
+    border-radius: 50px;
+    font-size: larger;
+    margin: 11% 2% 0 2%;
+}
+
+.next-arrow {
+    margin-left: auto;
+}
+
+.carousel-content {
+    margin-top: 10%;
+}
+
+.opening-days {
+    padding: 8px 15px;
+    border-radius: 50px;
+    background-color: rgba(232, 231, 231, 0.5);
+    width: fit-content;
+    font-family: 'Work Sans';
+    font-size: 18px;
+}
+.opening-days i {
+    font-size: smaller;
+    padding: 0 10px;
+}
+
+.title h2 {
+    font-size: 60px;
+    font-weight: 400;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.title div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: fit-content;
+    gap: 15px;
+    border-top: rgba(232, 231, 231, 0.5) dotted 2px;
+}
+
+.title h3 {
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Work Sans';
+}
+
+
+.carousel-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 1%;
+}
+
+.carousel-btns button {
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    height: 60px;
+}
+
+.N1 {
+    padding: 20px 35px;
+    background-color: rgb(146, 37, 37);
+    color: #ffffff;
+    border: rgb(164, 84, 84) solid 2px;
+}
+
+.N2 {
+    color: rgb(146, 37, 37);
+    border: #ffffff solid 2px;
+}
+.N2 i {
+    font-size: 24px;
+    padding: 15px;
+    transform: rotate(-75deg);
+    position: relative;
+    right: 5px;
+    background-color: rgb(219, 165, 165);
+    border-radius: 50px;
+}
+
+.N2 span {
+    position: relative;
+    bottom: 5px;
+    padding: 0 20px 0 10px;
+}
+
 
 /*******DESCRIPTION BANNER********/
 
@@ -220,214 +244,221 @@ header {
     display: flex;
     flex-direction: column; /*les 2 bannières sont l'une en dessous de l'autre*/
     margin-top: 17%; /*pour éviter que cette bannière reretrouve en dessous du carroussel*/
-    .fine-palate-banner {
-        display: flex;
-        justify-content: space-between; /*les éléments de cette bannière sont l'un à côté de l'autre, espacés de façon égale sans marge aux extrêmités*/
-        h2 {
-            font-weight: 600;
-            font-size: 18px;
-            color : rgb(146, 37, 37);
-            margin-bottom: 0;
-            margin-top: 25px;
-        }
-        h3 {
-            font-size: 50px;
-            font-weight: 400;
-            color: rgb(67, 65, 65);
-            margin-top: 0;
-        }
-        .palate-text {
-            display: flex;
-            flex-direction: column; 
-            .part1 {
-                font-size: 22px;
-                margin-bottom: 20px;
-            }
-            .part2 {
-                font-size: 18px;
-                font-weight: 300;
-                margin-bottom: 20px;
-            }
-        }
-        .discover-fair-btn {
-            font-family: 'Work Sans';
-            font-size: 16px;
-            font-weight: 600;
-            background-color: rgb(146, 37, 37);
-            border: rgb(146, 37, 37) solid 2px;
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 50px;
-            margin-top: 30px;
-        }
-    }
 }
+.fine-palate-banner {
+    display: flex;
+    justify-content: space-between; /*les éléments de cette bannière sont l'un à côté de l'autre, espacés de façon égale sans marge aux extrêmités*/
+}
+.fine-palate-banner h2 {
+    font-weight: 600;
+    font-size: 18px;
+    color : rgb(146, 37, 37);
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+.fine-palate-banner h3 {
+    font-size: 50px;
+    font-weight: 400;
+    color: rgb(67, 65, 65);
+    margin-top: 0;
+}
+.palate-text {
+    display: flex;
+    flex-direction: column;
+} 
+.palate-text .part1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.palate-text .part2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.discover-fair-btn {
+    font-family: 'Work Sans';
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(146, 37, 37);
+    border: rgb(146, 37, 37) solid 2px;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+/****DETAIS BANNER******/
 
 .details-banner {
     position: relative;
     margin-top: 100px;
     margin-bottom: 60px;
-    .details-content {
-        height: 350px;
-        .img-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            filter: brightness(0.4); /*filtre sombre pour le fond d'image*/
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        .content-text {
-            display: flex;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1; /** pour que ce contenu soit bien au-dessus de l'image**/
-            div {
-                padding-right: 55px;
-                padding-left: 55px;
-                margin-top: 40px;
-                .icon-txt-title {
-                    display: flex;
-                    align-items: center;
-                    height: 65px;
-                    margin-top: 0;
-                    margin-bottom: 10px;
-                    padding-left: 0;
-                    gap: 20px;
-                    i {
-                        font-size: 35px;
-                        color: #ffffff;
-                    }
-                    h2 {
-                        color: rgb(146, 37, 37);
-                        font-weight: 700;
-                        font-size: 80px;
-                        margin: 0;
-                    }
-                    h2 span {
-                        vertical-align: super; /*pour avoir le "ème" en exposant*/
-                        font-size: 40px;
-                    }
-                }
-                h3 {
-                    margin-top: 0;
-                    color: #ffffff;
-                }
-                p {
-                    font-weight: 400;
-                    margin: 0;
-                    color: #ffffff;
-                }
-            }
-            .visitor-text, .exhibitor-text, .hubs-to-visit-text {
-                border-right: white 1px dotted; /*pour avoir la sépation en pointillé blanc partout sauf à la fin*/
-            }
-        }
-    }
+    height: 350px;
+}
+.details-banner .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.4); /*filtre sombre pour le fond d'image*/
+}
+.details-banner .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-banner .content-txt {
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1; /** pour que ce contenu soit bien au-dessus de l'image**/
+}
+
+.icon-txt-title {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 0;
+    gap: 20px;
+}
+.icon-txt-title i {
+    font-size: 35px;
+    color: #ffffff;
+}
+.icon-txt-title h2 {
+    color: rgb(146, 37, 37);
+    font-weight: 700;
+    font-size: 80px;
+    margin: 0;
+}
+.icon-txt-title h2 span {
+    vertical-align: super; /*pour avoir le "ème" en exposant*/
+    font-size: 40px;
+}
+.content-txt h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-weight: 500;
+}
+.content-txt p {
+    font-weight: 400;
+    margin: 0;
+    color: #d5d3d3;
+}
+
+.visitor-text, .exhibitor-text, .hubs-to-visit-text {
+    border-right: white 1px dotted; /*pour avoir la sépation en pointillé blanc partout sauf à la fin*/
+}
+
+.visitor-text, .exhibitor-text, .hubs-to-visit-text, .edition51-fairtxt {
+    padding-left: 55px;
+    padding-right: 55px;
+    margin-top: 40px;
 }
 
 /*******TO BOOK BANNER*****/
 
-.toBook-banner .title {
+.toBook-title {
     display: flex;
     flex-direction: column;
-    h2 {
+}
+.toBook-title h2 {
         font-weight: 600;
         font-size: 18px;
         color : rgb(146, 37, 37);
         margin-bottom: 0;
-    }
-    h3 {
-        font-size: 50px;
-        font-weight: 400;
-        color: rgb(67, 65, 65);
-        margin-top: 0;
-    }
+}
+.toBook-title h3 {
+    font-size: 50px;
+    font-weight: 400;
+    color: rgb(67, 65, 65);
+    margin-top: 0;
 }
 
 .toBook-content {
     display: flex;
     justify-content: space-between;
-    .part1 {
-        display: flex;
-        margin-top: 10px;
-        height: 70px;
-    }
-    .toBook-text {
-        display: flex;
-        flex-direction: column;
-        .big-letter {
-                font-size: 100px;
-                font-weight: 700;
-                color : rgb(146, 37, 37);
-                text-align: left;
-                position: relative;
-                bottom: 52px;
-            }
-            .big-letter-text {
-                height: fit-content;
-            }
-            .part1, .part2 {
-                font-size: 22px;
-            }
-            .part2, .part3 {
-                margin-left: 6px;
-                margin-bottom: 20px;
-            }
-            .part3 {
-                font-size: 18px;
-                font-weight: 300;
-            }
-        }
-        .btn-section {
-            display: flex;
-            flex-direction: column;
-            width: fit-content;
-            button {
-                font-family: 'Work Sans';
-                font-size: 16px;
-                font-weight: 600;
-                border-radius: 50px;
-            }
-            .exhibitors-list-btn {
-                background-color: #ffffff;
-                border: rgb(146, 37, 37) solid 2px;
-                color: rgb(146, 37, 37);
-                padding: 20px;
-                margin-bottom: 30px;
-            }
-            .toBook-btn {
-                background-color: rgb(146, 37, 37);
-                border: rgb(146, 37, 37) solid 2px;
-                color: #ffffff;
-                i {
-                    font-size: 24px;
-                    margin-right: 5px;
-                    padding: 18px;
-                    border-radius: 50px;
-                    width: 20px;
-                    height: 20px;
-                    background-color: rgb(164, 84, 84);
-                    position: relative;
-                    right: 5px;
-                }
-                i::before {
-                    position: relative;
-                    right: 5px;
-                    bottom: 4px;
-                }
-                span {
-                    position: relative;
-                    bottom: 5px;
-                    padding-right: 15px;
-                }
-            }
-        }
+}
+.toBook-content .part1 {
+    display: flex;
+    margin-top: 10px;
+    height: 70px;
+}
+.toBook-text {
+    display: flex;
+    flex-direction: column;
+}
+.big-letter {
+    font-size: 100px;
+    font-weight: 700;
+    color : rgb(146, 37, 37);
+    text-align: left;
+    position: relative;
+    bottom: 52px;
+}
+.big-letter-text {
+    height: fit-content;
+}
+.toBook-text .part1, .toBook-text .part2 {
+    font-size: 22px;
+}
+.toBook-text .part2, .toBook-text .part3 {
+    margin-left: 6px;
+    margin-bottom: 20px;
+}
+.toBook-text .part3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.btn-section {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.btn-section button {
+    font-family: 'Work Sans';
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.exhibitors-list-btn {
+    background-color: #ffffff;
+    border: rgb(146, 37, 37) solid 2px;
+    color: rgb(146, 37, 37);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.toBook-btn {
+    background-color: rgb(146, 37, 37);
+    border: rgb(146, 37, 37) solid 2px;
+    color: #ffffff;
+}
+.toBook-btn i {
+    font-size: 24px;
+    margin-right: 5px;
+    padding: 18px;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(164, 84, 84);
+    position: relative;
+    right: 5px;
+}
+.toBook-btn i::before {
+    position: relative;
+    right: 5px;
+    bottom: 4px;
+}
+.toBook-btn span {
+    position: relative;
+    bottom: 5px;
+    padding-right: 15px;
 }
 
 
@@ -437,73 +468,77 @@ header {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-    .title {
-        margin-left: 5.15%;
-    }
-    h2 {
-        font-weight: 600;
-        font-size: 18px;
-        color : rgb(146, 37, 37);
-        margin-bottom: 0;
-    }
-    h3 {
-        font-size: 50px;
-        font-weight: 400;
-        color: rgb(67, 65, 65);
-        margin-top: 0;
-    }
-    .news-sliders {
-        display: flex;
-        align-items: center; /*centrage vertical des sliders*/
-        justify-content: space-between; /*espacement égal entre chaque slider sans marge aux extrêmités*/
-        margin-left: 1.2%;
-        margin-right: 1.2%;
-        div {
-            max-height: 380px;
-            width: auto; /** la largeur de la div s'ajuste à la largeur de l'image**/
-            img {
-                width: 406px;
-                object-fit: cover; /*pour que l'image prenne toute la taille de son conteneur*/
-            }
-            h4 {
-                font-family: 'Work Sans';
-                font-size: 20px;
-                font-weight: 600;
-            }
-            a {
-                text-decoration: none;
-                color: rgb(146, 37, 37);
-                font-weight: 800;
-                font-size: 14px;
-                border-bottom: rgb(146, 37, 37) solid 2px;
-            }
-        }
-        i {
-            font-size: 20px;
-            border-radius: 50px;
-            border: rgb(236, 133, 133) solid 1px;
-            color: rgb(146, 37, 37);
-            width: 20px;
-            height: 20px;
-            padding: 15px;
-            text-align: center; /*on centre le texte horizontalement dans son conteneur*/
-        }
-    }
-    .all-news-link {
-        text-align: center;
-        margin-top: 70px;
-        a {
-            text-decoration: none;
-            background-color: rgb(146, 37, 37);
-            color: white;
-            padding: 20px;
-            border-radius: 50px;
-            font-family: 'Work Sans';
-            font-weight: 600;
-            font-size: 16px;
-        }
-    }
 }
+.blog-title {
+    margin-left: 5.15%;
+}
+.blog-title h2 {
+    font-weight: 600;
+    font-size: 18px;
+    color : rgb(146, 37, 37);
+    margin-bottom: 0;
+}
+.blog-title h3 {
+    font-size: 50px;
+    font-weight: 400;
+    color: rgb(67, 65, 65);
+    margin-top: 0;
+}
+.news-sliders {
+    display: flex;
+    justify-content: space-between; /*espacement égal entre chaque slider sans marge aux extrêmités*/
+    align-items: center; /*centrage vertical des sliders*/
+    margin-left: 1.2%;
+    margin-right: 1.2%;
+}
+.slider {
+    display: flex;
+    justify-content: space-between;
+    max-height: 380px;
+    width: 91.8%;
+}
+.slider img {
+    width: 406px;
+    object-fit: cover; /*pour que l'image prenne toute la taille de son conteneur*/
+}
+.slider h4 {
+    font-family: 'Work Sans';
+    font-size: 20px;
+    font-weight: 600;
+}
+.slider a {
+    text-decoration: none;
+    color: rgb(146, 37, 37);
+    font-weight: 800;
+    font-size: 14px;
+    border-bottom: rgb(146, 37, 37) solid 2px;
+}
+        
+.prev-icon i, .next-icon i {
+    font-size: 20px;
+    border-radius: 50px;
+    border: rgb(236, 133, 133) solid 1px;
+    color: rgb(146, 37, 37);
+    padding: 15px 20px;
+    text-align: center; /*on centre le texte horizontalement dans son conteneur*/
+}
+
+.all-news-link {
+    text-align: center;
+    margin-top: 70px;
+}
+.all-news-link a {
+    text-decoration: none;
+    background-color: rgb(146, 37, 37);
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
 
 /******NEWSLETTER**********/
 
@@ -516,102 +551,104 @@ header {
     flex-direction: column;
     justify-content: center;
     height: 420px;
-    .img-container {
-        position: absolute;
-        top: 0;
-        left: 0;
+}
+#newsletter-banner .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#newsletter-banner .img-container img {
         width: 100%;
         height: 100%;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Pour assurer le remplissage de l'image */
-            filter: brightness(0.3); /* Ajustez la valeur pour obtenir l'effet de filtre sombre souhaité */
-        }
-    }
-    .title, .email-form, .confidentiality {
-        position: relative;
-        z-index: 1; /* Assure que le texte reste au-dessus de l'image de fond */
-    }
-    .title {
-        height: 110px;
-        width: fit-content;
-        position: relative;
-        left: 41%;
-        h2 {
-            text-align: center;
-            font-size: 18px;
-            font-weight: 500;
-            color: #a9a8a8;
-            margin: 0;
-        }
-        h3 {
-            font-size: 55px;
-            color: #ffffff;
-            font-weight: 400;
-            margin: 0;
-        }
-        .snake-line {
-            width: 70%;
-            margin: 0 auto;
-            height: 2px;
-            background-color: rgb(146, 37, 37);
-        }
-    }
-    .email-form {
-        margin-left: 35%;
-        form {
-            display: flex;
-            flex-direction: column;
-            width: 45%;
-            margin-top: 50px;
-            gap: 10px;
-            font-family: 'Work Sans';
-            label {
-                color: #ffffff;
-                font-weight: 600;
-                font-size: 14px;
-            }
-            div {
-                display: flex;
-                input {
-                    padding: 20px 10px;
-                    border: none;
-                    font-size: 18px;
-                }
-                input[type="email"] {
-                    width: 70%;
-                    border-radius: 50px 0 0 50px;
-                }
-                input[type="email"]::placeholder {
-                    text-align: center;
-                }
-                input[type="submit"]{
-                    width: 30%;
-                    border-radius: 0 50px 50px 0;
-                    background-color: rgb(146, 37, 37);
-                    color: #ffffff;
-                }
-            }
-        }
-    }
-    .confidentiality {
-        display: flex;
-        color: #ffffff;
-        justify-content: center;
-        font-weight: 300;
-        font-size: 15px;
-        i {
-            font-size: 22px;
-            position: relative;
-            right: 10px;
-            top: 15px;
-        }
-        p span {
-            border-bottom: 1px white solid;
-            padding-bottom: 2px;
-        }
-    }
+        object-fit: cover; /* Pour assurer le remplissage de l'image */
+        filter: brightness(0.3); /* Ajustez la valeur pour obtenir l'effet de filtre sombre souhaité */
+}
+.newsletter-title, .email-form, .confidentiality {
+    position: relative;
+    z-index: 1; /* Assure que le texte reste au-dessus de l'image de fond */
+}
+.newsletter-title {
+    height: 110px;
+    width: fit-content;
+    position: relative;
+    left: 41%;
+}
+.newsletter-title h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #a9a8a8;
+    margin: 0;
+}
+.newsletter-title h3 {
+    font-size: 55px;
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0;
+}
+.newsletter-title .snake-line { /*on m'a demandé de faire une ligne ondulée mais j'ai pas encore trouvé comment faire...*/
+    width: 70%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: rgb(146, 37, 37);
+}
+
+.email-form {
+    margin-left: 35%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-top: 50px;
+    gap: 10px;
+    font-family: 'Work Sans';
+}
+label {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+form div {
+    display: flex;
+}
+input {
+    padding: 20px 10px;
+    border: none;
+    font-size: 18px;
+}
+input[type="email"] {
+    width: 70%;
+    border-radius: 50px 0 0 50px;
+}
+input[type="email"]::placeholder {
+    text-align: center;
+}
+input[type="submit"]{
+    width: 30%;
+    border-radius: 0 50px 50px 0;
+    background-color: rgb(146, 37, 37);
+    color: #ffffff;
+}
+
+.confidentiality {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 15px;
+}
+.confidentiality i {
+    font-size: 22px;
+    position: relative;
+    right: 10px;
+    top: 15px;
+}
+.confidentiality p span {
+    border-bottom: 1px white solid;
+    padding-bottom: 2px;
 }
 
 
@@ -620,258 +657,260 @@ header {
 #practical-infos {
     display: flex;
     flex-direction: column;
-    .rate-infos {
-        display: flex;
-        column-gap: 6.2%;
-        img[src="assets/images/winefair/practical_1.png"] {
-            width: 46%;
-        }
-        .rate-infos-subsection {
-            display: flex;
-            flex-direction: column;
-            width: 49%;
-            row-gap: 4.9%;
-            .rate-content {
-                display: flex;
-                height: 51.2%;
-                justify-content: space-between;
-                .rate-text {
-                    .title {
-                        h2 {
-                            font-weight: 600;
-                            font-size: 18px;
-                            color: rgb(146, 37, 37);
-                            margin-bottom: 0;
-                        }
-                        h3 {
-                            font-size: 50px;
-                            font-weight: 400;
-                            color: rgb(67, 65, 65);
-                            margin-top: 0;
-                        }
-                    }
-                    p {
-                        font-size: 22px;
-                    }
-                }
-                img[src="assets/images/winefair/practical_2.png"] {
-                    width: 40%;
-                    height: 300px;
-                    position: relative;
-                    bottom: 70px;
-                }
-            }
-            .ticketRate-infos {
-                height: 43.9%;
-                .ticket-array {
-                    width: 95%;
-                    height: 110%;
-                    display: grid; /* on utilise un grid pour créer un "tableau" avec 2 colones et 3 lignes dont on donne les tailles*/
-                    grid-template-columns: 71% 29%;
-                    grid-template-rows: 28.51% 42.76% 28.51%;
-                    align-items: center;
-                    border-top: 1px dotted rgb(67, 65, 65);
-                    border-bottom: 1px dotted rgb(67, 65, 65);
-                    > div > div:first-child > span { /*on cible ici chaque élément enfant(span) en 1ère position dans l'élément div qui se trouve dans une autre div parent*/
-                        font-size: 22px;
-                        font-weight: 600;
-                    }
-                    > div > div > span:nth-child(2) { /*on cible ici chaque élément enfant(span) en 2ème position dans l'élément div qui se trouve dans une autre div parent*/
-                        font-size: 14px;
-                    }
-                    #underAge-ticket {
-                        border-top: 1px dotted rgb(67, 65, 65);
-                        border-bottom: 1px dotted rgb(67, 65, 65);
-                    }
-                    .ticket {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        height: 100%;
-                        border-right: 1px dotted rgb(67, 65, 65);
-                        border-left: none;
-                        padding-left: 20px;
-                    }
-                    #underAge-rate {
-                        border-top: 1px dotted rgb(67, 65, 65);
-                        border-bottom: 1px dotted rgb(67, 65, 65);
-                    }
-                    .rate {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: rgb(146, 37, 37);
-                        font-weight: 600;
-                        font-size: 18px;
-                        height: 100%;
-                    }
-                }
-                .ticket-access {
-                    margin-top: 40px;
-                    width: fit-content;
-                    background-color: rgb(146, 37, 37);
-                    border: rgb(146, 37, 37) solid 2px;
-                    color: #ffffff;
-                    border-radius: 50px;
-                    padding: 5px 30px 5px 10px;
-                    i {
-                        font-size: 24px;
-                        margin-right: 5px;
-                        padding: 18px;
-                        border-radius: 50px;
-                        width: 20px;
-                        height: 20px;
-                        background-color: rgb(105, 50, 50);
-                        position: relative;
-                        right: 5px;
-                        transform: rotate(-75deg);
-                    }
-                    i::before {
-                        position: relative;
-                        right: 3px;
-                        bottom: 2px;
-                    }
-                    a {
-                        text-decoration: none;
-                        color: #ffffff;
-                        position: relative;
-                        bottom: 5px;
-                    }
-                }
-            }
-        }
+}
+.rate-infos {
+    display: flex;
+    column-gap: 6.2%;
+}
+.rate-infos img[src="assets/images/winefair/practical_1.png"] {
+    width: 46%;
+}
+.rate-infos-subsection {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    row-gap: 4.9%;
+}
+.rate-content {
+    display: flex;
+    height: 51.2%;
+    justify-content: space-between;
+}
 
+.rate-title h2 {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(146, 37, 37);
+    margin-bottom: 0;
+}
+.rate-title h3 {
+    font-size: 50px;
+    font-weight: 400;
+    color: rgb(67, 65, 65);
+    margin-top: 0;
+}
+
+.rate-text p {
+    font-size: 22px;
+}
+    
+.rate-content img[src="assets/images/winefair/practical_2.png"] {
+    width: 40%;
+    height: 300px;
+    position: relative;
+    bottom: 70px;
+}
+
+.ticketRate-infos {
+    height: 43.9%;
+}
+.ticket-array {
+    width: 95%;
+    height: 110%;
+    display: grid; /* on utilise un grid pour créer un "tableau" avec 2 colones et 3 lignes dont on donne les tailles*/
+    grid-template-columns: 71% 29%;
+    grid-template-rows: 28.51% 42.76% 28.51%;
+    align-items: center;
+    border-top: 1px dotted rgb(67, 65, 65);
+    border-bottom: 1px dotted rgb(67, 65, 65);
+}
+.ticket-array > div > div:first-child > span { /*on cible ici chaque élément enfant(span) en 1ère position dans l'élément div qui se trouve dans une autre div parent*/
+    font-size: 22px;
+    font-weight: 600;
+}
+.ticket-array > div > div > span:nth-child(2) { /*on cible ici chaque élément enfant(span) en 2ème position dans l'élément div qui se trouve dans une autre div parent*/
+    font-size: 14px;
+}
+#underAge-ticket {
+    border-top: 1px dotted rgb(67, 65, 65);
+    border-bottom: 1px dotted rgb(67, 65, 65);
+}
+.ticket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-right: 1px dotted rgb(67, 65, 65);
+    border-left: none;
+    padding-left: 20px;
+}
+#underAge-rate {
+    border-top: 1px dotted rgb(67, 65, 65);
+    border-bottom: 1px dotted rgb(67, 65, 65);
+}
+.rate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(146, 37, 37);
+    font-weight: 600;
+    font-size: 18px;
+    height: 100%;
+}
+
+.ticket-access {
+    margin-top: 40px;
+    width: fit-content;
+    background-color: rgb(146, 37, 37);
+    border: rgb(146, 37, 37) solid 2px;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 5px 30px 5px 10px;
+}
+.ticket-access i {
+    font-size: 24px;
+    margin-right: 5px;
+    padding: 18px;
+    border-radius: 50px;
+    background-color: rgb(105, 50, 50);
+    position: relative;
+    right: 7px;
+    transform: rotate(-75deg);
+}
+.ticket-access a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    bottom: 5px;
+}
+
+
+        
+.location-infos {
+    position: relative;
+    margin-top: 250px;
+    margin-bottom: 120px;
+    display: flex;
+    height: 680px;
+}
+.location-infos .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.map-btns {
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    z-index: 2; /* pour être sûr que le button:hover fonctionne*/
+    display: flex;
+    flex-direction: column;
+}
+.map-btns button {
+        border: none;
+        background: none;
     }
-    .location-infos {
+
+.map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour assurer le remplissage de l'image dans son conteneur*/
+}
+
+.content {
+    z-index: 1;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+.content i[class="fa-regular fa-circle-dot"] {
+        font-size: 40px;
+        color: rgb(146, 37, 37);
         position: relative;
-        margin-top: 250px;
-        margin-bottom: 120px;
-        z-index: 1; /* Assure que le contenu reste au-dessus de l'image de fond */
-        display: flex;
-        height: 680px;
-        .img-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            .map-btns {
-                position: absolute;
-                top: 4%;
-                left: 1%;
-                z-index: 10; /* pour être sûr que le button:hover fonctionne*/
-                display: flex;
-                flex-direction: column;
-                button {
-                    border: none;
-                    background: none;
-                }
-            }
-            .map-img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* Pour assurer le remplissage de l'image dans son conteneur*/
-            }
-        }
-        .content {
-            z-index: 2;
-            display: flex;
-            justify-content: right;
-            width: 100%;
-            i[class="fa-regular fa-circle-dot"] {
-                font-size: 40px;
-                color: rgb(146, 37, 37);
-                position: relative;
-                top: 43%;
-                right: 26%;
-            }
-            }
-            .content-text {
-                background-color: rgb(24, 24, 24);
-                width: 37.5%;
-                height: 95%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly; /*pour que chaque élément de ce conteneur soit espacé de façon égale avec des marges aux extrêmités*/
-                position: relative;
-                top: 80px;
-                .title, .address, .phone, .opening-hours, .fair-plan-link {
-                    margin-left: 15%;
-                }
-                .title {
-                    h2 {
-                        font-family: 'Work Sans';
-                        font-weight: 400;
-                        font-size: 18px;
-                        margin-bottom: 0;
-                        color: #a9a8a8;
-                        margin: 0;
-                    }
-                    h3 {
-                        font-size: 50px;
-                        font-weight: 400;
-                        margin-top: 0;
-                        color: #ffffff;
-                        margin: 0;
-                    }
-                    .snake-line { /*on m'a demandé de faire une ligne ondulée mais j'ai pas encore trouvé comment faire...*/
-                        position: relative;
-                        width: 50%;
-                        margin-left: 0;
-                        height: 2px;
-                        background-color: rgb(146, 37, 37);
-                    }
-                }
-                .address-phone {
-                    display: flex;
-                    flex-direction: column;
-                    color: #ffffff;
-                    font-size: 24px;
-                    font-weight: 300;
-                    gap: 10px;
-                    i {
-                        color: rgb(146, 37, 37);
-                    }
-                    .address {
-                        display: flex;
-                        gap: 15px;
-                        .address-text {
-                            width: 70%;
-                        }
-                    }
-                    .phone {
-                        display: flex;
-                        gap: 10px;
-                    }
-                }
-                .opening-hours {
-                    display: flex;
-                    flex-direction: column;
-                    font-size: 18px;
-                    div {
-                        display: flex;
-                        span:first-child { /*on vise ici chaque 1er span des div de opening hours*/
-                            color: #a9a8a8;
-                        }
-                        span:nth-child(2) { /*on vise le second span*/
-                            color: #d5d3d3;
-                            font-weight: 500;
-                            padding-left: 5px;
-                        }
-                    }
-                }
-                .fair-plan-link {
-                    text-decoration: none;
-                    color: #ffffff;
-                    font-weight: 600;
-                    font-family: 'Work Sans';
-                    padding: 20px;
-                    border-radius: 50px;
-                    background-color: rgb(146, 37, 37);
-                }
-            }
-        }
+        top: 43%;
+        right: 26%;
     }
+
+    .content-text {
+        background-color: rgb(24, 24, 24);
+        width: 37.5%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; /*pour que chaque élément de ce conteneur soit espacé de façon égale avec des marges aux extrêmités*/
+        position: relative;
+        top: 80px;
+    }
+.content-title, .address, .phone, .opening-hours, .fair-plan-link {
+    margin-left: 15%;
+}
+
+.content-title h2 {
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 0;
+    color: #a9a8a8;
+    margin: 0;
+}
+.content-title  h3 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 0;
+    color: #ffffff;
+    margin: 0;
+}
+.snake-line { /*on m'a demandé de faire une ligne ondulée mais j'ai pas encore trouvé comment faire...*/
+    position: relative;
+    width: 50%;
+    margin-left: 0;
+    height: 2px;
+    background-color: rgb(146, 37, 37);
+}
+    
+.address-phone {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    gap: 10px;
+}
+.address-phone i {
+    color: rgb(146, 37, 37);
+}
+.address {
+    display: flex;
+    gap: 15px;
+}
+.address-text {
+    width: 70%;
+}
+
+.phone {
+    display: flex;
+    gap: 10px;
+}
+
+.opening-hours {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+.opening-hours div {
+    display: flex;
+}
+.opening-hours div span:first-child { /*on vise ici chaque 1er span des div de opening hours*/
+    color: #a9a8a8;
+}
+.opening-hours div span:nth-child(2) { /*on vise le second span*/
+    color: #d5d3d3;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.fair-plan-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Work Sans';
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgb(146, 37, 37);
+}
+    
 
 /****FOOTER*****/
 
@@ -882,20 +921,20 @@ footer {
     background-color:  rgb(146, 37, 37);
     padding: 1%  5.15%;
     gap: 15%;
-    .footer-links {
-        a {
-            text-decoration: none;
-            font-size: 14px;
-            color: #ffffff;
-            padding: 0 20px;
-            border-left: #ffffff solid 1px;
-        }
-        .first-link {
-            border-left: none;
-            padding-left: 0;
-        }
-    }
-    .footer-mention {
-        font-weight: 300;
-    }
+}
+
+.footer-links a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #ffffff;
+        padding: 0 20px;
+        border-left: #ffffff solid 1px;
+}
+
+.first-link {
+    border-left: none;
+    padding-left: 0;
+}
+.footer-mention {
+    font-weight: 300;
 }

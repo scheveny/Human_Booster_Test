@@ -7,7 +7,7 @@
         <link href="./assets/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
         <!--Insertion d'un fichier JavaSript-->
-        <script src="./assets/script.js" defer></script><!--le defer sert à être sûr que le chargement initial de la page se fasse avant toute exécution du script-->
+        <script src="./assets/script.js" defer></script><!--le defer sert à être sûr que le chargement initial de la page se fasse avant toute exécution du script (double sécurité)-->
         <!--Lien permettant d'utiliser la bibliothèque d'icônes Fontawesome-->
         <script src="https://kit.fontawesome.com/5c9d52cae8.js" crossorigin="anonymous"></script>
     </head>
@@ -44,7 +44,11 @@
                 <!--Conteneur du carrousel-->
                 <div id="carousel">
                     <div class="img-container">
-                        <img src="assets/images/winefair/bckg_img_details.jpg" alt="Fond du carroussel">
+                        <img src="assets/images/winefair/bckg_img_details.jpg" alt="Fond du carroussel"> <!--Image visible dans le carrousel lors du chargement initial de la page-->
+                        <img style="display: none;" src="assets/images/blog/slide_4.png" alt="">
+                        <img style="display: none;" src="assets/images/winefair/carousel/crowd_1.jpg" alt="">
+                        <img style="display: none;" src="assets/images/winefair/carousel/crowd_2.jpg" alt="">
+                        <img style="display: none;" src="assets/images/winefair/carousel/crowd_3.jpg" alt="">
                     </div>
                     <div class="global-carousel">
                         <div class="prev-arrow">
@@ -98,70 +102,69 @@
                     </div>
                     <!--Conteneur des statistiques du salon-->
                     <div class="details-banner">
-                        <div class="details-content">
-                            <div class="img-container">
-                                <img src="assets/images/winefair/bckg_img_details.jpg" alt="Fond d'image">
+                        <div class="img-container">
+                            <img src="assets/images/winefair/bckg_img_details.jpg" alt="Fond d'image">
+                        </div>
+                        <div class="content-txt">
+                            <div class="visitor-text">
+                                <div class="icon-txt-title">
+                                    <i class="fa-solid fa-wine-glass-empty"></i>
+                                    <h2>35K</h2>
+                                </div>
+                                <h3>VISITEURS ÉPICURIENS</h3>
+                                <p>Chaque année, 35 000 visiteurs
+                                    <br>affluent dans les larges allées de la
+                                    <br>Grande Halle d'Auvergne. Ce rendez-
+                                    <br>vous attire un public désireux de
+                                    <br>partager des produits authentiques.
+                                </p>
                             </div>
-                            <div class="content-text">
-                                <div class="visitor-text">
-                                    <div class="icon-txt-title">
-                                        <i class="fa-solid fa-wine-glass-empty"></i>
-                                        <h2>35K</h2>
-                                    </div>
-                                    <h3>VISITEURS ÉPICURIENS</h3>
-                                    <p>Chaque année, 35 000 visiteurs
-                                        <br>affluent dans les larges allées de la
-                                        <br>Grande Halle d'Auvergne. Ce rendez-
-                                        <br>vous attire un public désireux de
-                                        <br>partager des produits authentiques.
-                                    </p>
+                            <div class="exhibitor-text">
+                                <div class="icon-txt-title">
+                                    <i class="fa-regular fa-image"></i>
+                                    <h2>300</h2>
                                 </div>
-                                <div class="exhibitor-text">
-                                    <div class="icon-txt-title">
-                                        <i class="fa-regular fa-image"></i>
-                                        <h2>300</h2>
-                                    </div>
-                                    <h3>EXPOSANTS DE FRANCE & NAVARRE</h3>
-                                    <p>En provenance des terroirs
-                                        <br>emblématiques de France et
-                                        <br>Navarre, plus de 300 exposants, dont
-                                        <br>quelques 250 viticulteurs, participent à
-                                        <br>cet événement d'envergure nationale.
-                                    </p>
+                                <h3>EXPOSANTS DE FRANCE & NAVARRE</h3>
+                                <p>En provenance des terroirs
+                                    <br>emblématiques de France et
+                                    <br>Navarre, plus de 300 exposants, dont
+                                    <br>quelques 250 viticulteurs, participent à
+                                    <br>cet événement d'envergure nationale.
+                                </p>
+                            </div>
+                            <div class="hubs-to-visit-text">
+                                <div class="icon-txt-title">
+                                    <i class="fa-solid fa-carrot"></i>
+                                    <h2>3</h2>
                                 </div>
-                                <div class="hubs-to-visit-text">
-                                    <div class="icon-txt-title">
-                                        <i class="fa-solid fa-carrot"></i>
-                                        <h2>3</h2>
-                                    </div>
-                                    <h3>PÔLES À PARCOURIR</h3>
-                                    <p>Les meilleurs producteurs de nos
-                                        <br>terroirs sont regroupés selon leurs
-                                        <br>"spécialités", qui toutes contribuent à
-                                        <br>la réputation de savoir vivre de notre
-                                        <br>pays.
-                                    </p>
+                                <h3>PÔLES À PARCOURIR</h3>
+                                <p>Les meilleurs producteurs de nos
+                                    <br>terroirs sont regroupés selon leurs
+                                    <br>"spécialités", qui toutes contribuent à
+                                    <br>la réputation de savoir vivre de notre
+                                    <br>pays.
+                                </p>
+                            </div>
+                            <div class="edition51-fairtxt">
+                                <div class="icon-txt-title">
+                                    <i class="fa-solid fa-wine-glass"></i>
+                                    <h2>51<span>ème</span></h2>
                                 </div>
-                                <div class="51th-edition-fair-text">
-                                    <div class="icon-txt-title">
-                                        <i class="fa-solid fa-wine-glass"></i>
-                                        <h2>51<span>ème</span></h2>
-                                    </div>
-                                    <h3>ÉDITION DU SALON</h3>
-                                    <p>Alors, que vous soyez vin ou
-                                        <br>gastronomie, peu importe ! Le salon
-                                        <br>du vin de Clermont-Ferrand vous
-                                        <br>permet d'éveiller tous vos sens et ce,
-                                        <br>en toute conviviabilité !
-                                    </p>
-                                </div>
+                                <h3>ÉDITION DU SALON</h3>
+                                <p>Alors, que vous soyez vin ou
+                                    <br>gastronomie, peu importe ! Le salon
+                                    <br>du vin de Clermont-Ferrand vous
+                                    <br>permet d'éveiller tous vos sens et ce,
+                                    <br>en toute conviviabilité !
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--conteneur "Un tour de France au coeur des vignobles"-->
                 <div class="toBook-banner">
-                    <div class="title"><h2>UN TOUR DE FRANCE</h2>
+                    <div class="toBook-title">
+                        <h2>UN TOUR DE FRANCE</h2>
                         <h3>au coeur des vignobles</h3>
                     </div>
                     <div class="toBook-content">
@@ -185,7 +188,7 @@
                             </span>
                             <div class="btn-section">
                                 <button class="exhibitors-list-btn"><span>LISTE DES EXPOSANTS</span></button>
-                                <button class="toBook-btn"><i class="fa-solid fa-house"></i><span>RÉSERVER VOTRE STAND</span></i></button>
+                                <button class="toBook-btn"><i class="fa-solid fa-house"></i><span>RÉSERVER VOTRE STAND</span></button>
                             </div>
                         </div>
                         <img src="assets/images/winefair/Book_banner_2.png" alt="un verre de vin se remplissant">
@@ -194,38 +197,71 @@
             </section>
             <!--Section du blog pour en savoir plus sur le salon-->
             <section id="news-blog">
-                <div class="title">
+                <div class="blog-title">
                     <h2>LE BLOG</h2>
                     <h3>une balade gourmande ...</h3>
                 </div>
                 <div class="news-sliders">
-                    <i class="fa-solid fa-angle-left"></i>
-                    <div>
-                        <img src="assets/images/blog/slide_1.png" alt="un verre de vin incliné">
-                        <h4>Comment conserver son vin après
-                            <br>ouverture ?</h4>
-                        <a href="#">EN SAVOIR PLUS</a>
+                    <div class="prev-icon">
+                        <i class="fa-solid fa-angle-left"></i>
                     </div>
-                    <div class>
-                        <img src="assets/images/blog/slide_2.png" alt="une foule se promenant au salon">
-                        <h4>Les salons du vin, des événements
-                            <br>vins et gastronomie et une équipe
-                            <br>pour les organiser</h4>
-                        <a href="#">EN SAVOIR PLUS</a>
+                    <div id="slider1" class="slider">
+                        <div>
+                            <img src="assets/images/blog/slide_1.png" alt="un verre de vin incliné">
+                            <h4>Comment conserver son vin après
+                                <br>ouverture ?</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
+                        <div class>
+                            <img src="assets/images/blog/slide_2.png" alt="une foule se promenant au salon">
+                            <h4>Les salons du vin, des événements
+                                <br>vins et gastronomie et une équipe
+                                <br>pour les organiser</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/blog/slide_3.png" alt="alignement de bouteilles de vin">
+                            <h4>2018, une année placée sous le
+                                <br>signe du renouveau</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/blog/slide_4.png" alt="alignement de bouteilles de vin">
+                            <h4>À la découverte des confréries des 
+                                <br>vins</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
                     </div>
-                    <div>
-                        <img src="assets/images/blog/slide_3.png" alt="alignement de bouteilles de vin">
-                        <h4>2018, une année placée sous le
-                            <br>signe du renouveau</h4>
-                        <a href="#">EN SAVOIR PLUS</a>
+                    <div id="slider2" class="slider" style="display: none;">
+                        <div class>
+                            <img src="assets/images/blog/slide_2.png" alt="une foule se promenant au salon">
+                            <h4>Les salons du vin, des événements
+                                <br>vins et gastronomie et une équipe
+                                <br>pour les organiser</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/blog/slide_4.png" alt="alignement de bouteilles de vin">
+                            <h4>À la découverte des confréries des 
+                                <br>vins</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/blog/slide_1.png" alt="un verre de vin incliné">
+                            <h4>Comment conserver son vin après
+                                <br>ouverture ?</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
+                        <div>
+                            <img src="assets/images/blog/slide_3.png" alt="alignement de bouteilles de vin">
+                            <h4>2018, une année placée sous le
+                                <br>signe du renouveau</h4>
+                            <a href="#">EN SAVOIR PLUS</a>
+                        </div>
                     </div>
-                    <div>
-                        <img src="assets/images/blog/slide_4.png" alt="alignement de bouteilles de vin">
-                        <h4>À la découverte des confréries des 
-                            <br>vins</h4>
-                        <a href="#">EN SAVOIR PLUS</a>
+                    <div class="next-icon">
+                        <i class="fa-solid fa-angle-right"></i>
                     </div>
-                    <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="all-news-link"><a href="#">TOUTES NOS ACTUALITÉS</a></div>
             </section>
@@ -234,7 +270,7 @@
                 <div class="img-container">
                     <img src="assets/images/winefair/newsletter_bckgr.jpg" alt="Fond d'image zoomant sur une grappe de raisin">
                 </div>
-                <div class="title">
+                <div class="newsletter-title">
                     <h2>INSCRIPTION À</h2>
                     <h3>Newsletter</h3>
                     <div class="snake-line"></div>
@@ -264,7 +300,7 @@
                     <div class="rate-infos-subsection">
                         <div class="rate-content">
                             <div class="rate-text">
-                                <div class="title">
+                                <div class="rate-title">
                                     <h2>INFOS PRATIQUES</h2>
                                     <h3>Tarifs du salon</h3>
                                 </div>
@@ -315,7 +351,7 @@
                     <div class="content">
                         <i class="fa-regular fa-circle-dot"></i>
                         <div class="content-text">
-                            <div class="title">
+                            <div class="content-title">
                                 <h2>INFOS PRATIQUES</h2>
                                 <h3>Comment venir ?</h3>
                                 <div class="snake-line"></div>
